@@ -1,0 +1,29 @@
+name: mc_music_app
+description: A new Flutter project.
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: '>=2.19.2 <3.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  google_fonts: ^4.0.4
+  table_calendar: ^3.0.9
+  intl: ^0.18.1
+  font_awesome_flutter: ^10.4.0
+  url_launcher: ^6.1.11
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - immagini/logo.png
+    - immagini/giphy.gif
+    - immagini/sfondo_home.jpg
+    - immagini/utente_predefinito.jpg
