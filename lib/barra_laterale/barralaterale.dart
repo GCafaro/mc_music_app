@@ -13,25 +13,27 @@ class Barralaterale extends StatelessWidget {
   Widget build(BuildContext context) {
     return Drawer(
       child: Column(children: [
-        Container(
-          color: const Color.fromARGB(255, 100,133,205),
-          padding: const EdgeInsets.only(top: 20),
-          child: Column(children: [
+        
+          
             Container(
-              margin: const EdgeInsets.only(bottom: 20),
+              color: const Color.fromARGB(255, 100,133,205),
               height: MediaQuery.of(context).size.height/3,
-              width: MediaQuery.of(context).size.width/3,
-              child: const Padding(
-                padding: EdgeInsets.all(15.0),
-                child: Image(image: AssetImage('immagini/logo.png')),
-              ),
+              width: MediaQuery.of(context).size.width,
+             
+                child: const Padding(
+                  padding: EdgeInsets.all(20.0),
+                  child: Image(
+                    fit: BoxFit.contain,
+                    image: AssetImage('immagini/logo.png')),
+                ),
+              
               
             ),
             menu(context),
-          ]),
+      ] 
         )
-      ]),
-    );
+      );
+    
   }
 }
 
@@ -50,9 +52,9 @@ Widget menu(BuildContext context) {
                         );
                 },
                 title: Text("Home ",
-                    style: GoogleFonts.robotoCondensed(
-                        fontWeight: FontWeight.bold)),
-                leading: const Icon(Icons.home,color: Colors.black),
+                    style: GoogleFonts.pacifico(
+                        fontWeight: FontWeight.bold,fontSize: 25)),
+                leading: const Icon(Icons.home,color: Colors.black,size: 35,),
                 
                 ),
               ListTile(
@@ -63,9 +65,9 @@ Widget menu(BuildContext context) {
                         );
                 },
                 title: Text("Eventi",
-                    style: GoogleFonts.robotoCondensed(
-                        fontWeight: FontWeight.bold)),
-                leading: const Icon(Icons.calendar_today,color: Colors.black),),
+                    style: GoogleFonts.pacifico(
+                        fontWeight: FontWeight.bold,fontSize: 25)),
+                leading: const Icon(Icons.calendar_today,color: Colors.black,size: 35,),),
                 ListTile(
                 onTap: () {
                   //Navigator.push(
@@ -74,9 +76,9 @@ Widget menu(BuildContext context) {
                       //  );
                 },
                 title: Text("Canzoni",
-                    style: GoogleFonts.robotoCondensed(
-                        fontWeight: FontWeight.bold)),
-                leading: const Icon(Icons.music_note,color: Colors.black),),
+                    style: GoogleFonts.pacifico(
+                        fontWeight: FontWeight.bold,fontSize: 25)),
+                leading: const Icon(Icons.music_note,color: Colors.black,size: 35,),),
                 ListTile(
                 onTap: () {Navigator.push(
                           context,                
@@ -84,9 +86,9 @@ Widget menu(BuildContext context) {
                         );
                         },
                 title: Text("Info",
-                    style: GoogleFonts.robotoCondensed(
-                        fontWeight: FontWeight.bold)),
-                leading: const Icon(Icons.info,color: Colors.black),),
+                    style: GoogleFonts.pacifico(
+                        fontWeight: FontWeight.bold,fontSize: 25)),
+                leading: const Icon(Icons.info,color: Colors.black,size: 35,),),
                 
   
             

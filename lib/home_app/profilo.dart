@@ -11,7 +11,7 @@ class Profilo extends StatelessWidget {
         drawer: const Barralaterale(),
         appBar: AppBar(
           backgroundColor: const Color.fromARGB(255, 100, 133, 205),
-          title: const Text('Profilo'),
+          title: Text('Profilo',style: GoogleFonts.pacifico(fontSize: 25,color: Colors.black),),
           centerTitle: true,
         ),
         body: Column(

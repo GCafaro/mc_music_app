@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mc_music_app/barra_laterale/barralaterale.dart';
 import 'profilo.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class PaginaIniziale extends StatelessWidget {
 
@@ -12,11 +13,9 @@ class PaginaIniziale extends StatelessWidget {
       drawer: const Barralaterale(),
       appBar: AppBar(
         backgroundColor: const Color.fromARGB(255, 100,133,205),
-        title: const Text(
-          "Manlio Capitolo Music App",
-          style: TextStyle(
-            fontWeight: FontWeight.w900,
-          ),
+        title: Text(
+          "MC Music App ",
+          style: GoogleFonts.pacifico(fontSize: 25,color: Colors.black),
         ),
         centerTitle: true,
         actions: [

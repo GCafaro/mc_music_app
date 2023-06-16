@@ -1,6 +1,7 @@
 import 'package:table_calendar/table_calendar.dart';
 import 'package:flutter/material.dart';
 import 'package:mc_music_app/barra_laterale/barralaterale.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Eventi extends StatefulWidget {
   const Eventi({super.key});
@@ -26,12 +27,11 @@ class CreaEventi extends State<Eventi> {
           drawer: const Barralaterale(),
           appBar: AppBar(
              backgroundColor: const Color.fromARGB(255, 100, 133, 205),
-            title: const Center(
-              child: Text(
+            title: Text(
                 'Calendario Eventi',
-                style: TextStyle(fontSize: 20),
+                style: GoogleFonts.pacifico(fontSize: 25,color: Colors.black),
                 ),
-            ), 
+             centerTitle: true,
 
           ),
           body: Column(
