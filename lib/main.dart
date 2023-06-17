@@ -55,9 +55,10 @@ class _MainAppState extends State<MainApp> {
                 Container(
                   height: 50,
                   width: 300,
-                  decoration: const BoxDecoration(
-                      color: Color.fromARGB(255, 100, 133, 205),
-                      borderRadius: BorderRadius.only(
+                  decoration: BoxDecoration(
+                     border: Border.all(color: Colors.black, width: 1),
+                      color: const Color.fromARGB(255, 100, 133, 205),
+                      borderRadius: const BorderRadius.only(
                           topLeft: Radius.circular(25),
                           topRight: Radius.circular(25))),
                   
@@ -72,7 +73,7 @@ class _MainAppState extends State<MainApp> {
                             Navigator.push(
                              context,
                               MaterialPageRoute(
-                                  builder: (context) => const PaginaIniziale()),
+                                  builder: (context) =>  PaginaIniziale()),
                             );
                           } else {
                             showDialog(
@@ -89,17 +90,18 @@ class _MainAppState extends State<MainApp> {
                             overlayColor:
                                 MaterialStateProperty.all(Colors.transparent)),
                         child: Text('Accedi',
-                            style: GoogleFonts.roboto(
-                                fontSize: 20, color: Colors.black))),
+                            style: GoogleFonts.pacifico(
+                                fontSize: 22, color: Colors.black))),
                   
                 ),
                 Container(
-                  decoration: const BoxDecoration(
+                  decoration: BoxDecoration(
                       color: Colors.white,
-                      borderRadius: BorderRadius.only(
+                      border: Border.all(color: Colors.black, width: 1),
+                      borderRadius: const BorderRadius.only(
                           bottomLeft: Radius.circular(25),
                           bottomRight: Radius.circular(25))),
-                  height: 145,
+                  height: 148,
                   width: 300,
                   child: Column(
                     children: [

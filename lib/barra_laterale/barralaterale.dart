@@ -1,9 +1,11 @@
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mc_music_app/barra_laterale/eventi.dart';
 import 'package:mc_music_app/home_app/paginainiziale.dart';
 import 'info.dart';
-//import 'lista_canzoni/canzoni.dart';
+import 'package:mc_music_app/barra_laterale/lista_canzoni/canzoni.dart';
+
 
 
 class Barralaterale extends StatelessWidget {
@@ -29,6 +31,14 @@ class Barralaterale extends StatelessWidget {
               
               
             ),
+            const Padding(
+              padding:EdgeInsets.only(bottom:10.0),
+              child: Divider(
+                      height:0,
+                      thickness: 3,
+                      color: Colors.black,
+                    ),
+            ),
             menu(context),
       ] 
         )
@@ -43,12 +53,13 @@ Widget menu(BuildContext context) {
       child: Padding(
           padding: const EdgeInsets.all(2),
           child: Column(
+            
             children: [
                 ListTile(
                 onTap: () {
                   Navigator.push(
                           context,                
-                          MaterialPageRoute(builder: (context) =>   const PaginaIniziale()),
+                          MaterialPageRoute(builder: (context) =>  PaginaIniziale()),
                         );
                 },
                 title: Text("Home ",
@@ -57,6 +68,7 @@ Widget menu(BuildContext context) {
                 leading: const Icon(Icons.home,color: Colors.black,size: 35,),
                 
                 ),
+                const SizedBox(height: 10),
               ListTile(
                 onTap: () {
                   Navigator.push(
@@ -67,18 +79,20 @@ Widget menu(BuildContext context) {
                 title: Text("Eventi",
                     style: GoogleFonts.pacifico(
                         fontWeight: FontWeight.bold,fontSize: 25)),
-                leading: const Icon(Icons.calendar_today,color: Colors.black,size: 35,),),
+                leading: const Icon(Icons.calendar_month,color: Colors.black,size: 35,),),
+                const SizedBox(height: 10),
                 ListTile(
                 onTap: () {
-                  //Navigator.push(
-                    //      context,                
-                      //    MaterialPageRoute(builder: (context) =>   const Canzoni()),
-                      //  );
+                  Navigator.push(
+                          context,                
+                          MaterialPageRoute(builder: (context) =>   const Canzoni()),
+                        );
                 },
                 title: Text("Canzoni",
                     style: GoogleFonts.pacifico(
                         fontWeight: FontWeight.bold,fontSize: 25)),
-                leading: const Icon(Icons.music_note,color: Colors.black,size: 35,),),
+                leading: const Icon(Icons.music_note,color: Colors.black,size: 35,)),
+                const SizedBox(height: 10),
                 ListTile(
                 onTap: () {Navigator.push(
                           context,                
@@ -88,10 +102,7 @@ Widget menu(BuildContext context) {
                 title: Text("Info",
                     style: GoogleFonts.pacifico(
                         fontWeight: FontWeight.bold,fontSize: 25)),
-                leading: const Icon(Icons.info,color: Colors.black,size: 35,),),
-                
-  
-            
+                leading: const Icon(Icons.info,color: Colors.black,size: 35,),),       
             ],
           )),
     ),
