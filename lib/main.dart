@@ -56,43 +56,39 @@ class _MainAppState extends State<MainApp> {
                   height: 50,
                   width: 300,
                   decoration: BoxDecoration(
-                     border: Border.all(color: Colors.black, width: 1),
+                      border: Border.all(color: Colors.black, width: 1),
                       color: const Color.fromARGB(255, 100, 133, 205),
                       borderRadius: const BorderRadius.only(
                           topLeft: Radius.circular(25),
                           topRight: Radius.circular(25))),
-                  
-                    child: TextButton(
-                        onPressed: () {
-                          String nomeUtente = controllerNomeUtente.text;
-                          String password = controllerPassword.text;
-                          
-                          if (nomeUtente ==
-                                  "gabriele.cafaro@itcgtursi.edu.it" &&
-                             password == "1234") {
-                            Navigator.push(
-                             context,
-                              MaterialPageRoute(
-                                  builder: (context) =>  PaginaIniziale()),
-                            );
-                          } else {
-                            showDialog(
-                                context: context,
-                                builder: (BuildContext context) {
-                                  return const AlertDialog(
-                                    title: Text('Credenziali errate.Riprova.'),
-                                  );
-                                });
-                          }
-                          
-                        },
-                        style: ButtonStyle(
-                            overlayColor:
-                                MaterialStateProperty.all(Colors.transparent)),
-                        child: Text('Accedi',
-                            style: GoogleFonts.pacifico(
-                                fontSize: 22, color: Colors.black))),
-                  
+                  child: TextButton(
+                      onPressed: () {
+                        String nomeUtente = controllerNomeUtente.text;
+                        String password = controllerPassword.text;
+
+                        if (nomeUtente == "gabriele.cafaro@itcgtursi.edu.it" &&
+                            password == "1234") {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => PaginaIniziale()),
+                          );
+                        } else {
+                          showDialog(
+                              context: context,
+                              builder: (BuildContext context) {
+                                return const AlertDialog(
+                                  title: Text('Credenziali errate.Riprova.'),
+                                );
+                              });
+                        }
+                      },
+                      style: ButtonStyle(
+                          overlayColor:
+                              MaterialStateProperty.all(Colors.transparent)),
+                      child: Text('Accedi',
+                          style: GoogleFonts.pacifico(
+                              fontSize: 22, color: Colors.black))),
                 ),
                 Container(
                   decoration: BoxDecoration(
